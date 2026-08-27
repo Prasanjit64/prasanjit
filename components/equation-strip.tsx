@@ -13,21 +13,21 @@ export function EquationStrip() {
   return (
     <div
       aria-hidden="true"
-      className="relative flex w-full overflow-hidden border-y border-border bg-foreground py-3 text-primary-foreground select-none"
+      className="relative flex w-full overflow-hidden border-y border-primary/40 bg-primary py-3 text-primary-foreground select-none"
     >
       <div className="flex shrink-0 animate-marquee gap-10 pr-10">
         {[...EQUATIONS, ...EQUATIONS].map((eq, i) => (
-          <span key={i} className="flex items-center gap-10 font-mono text-sm tracking-tight text-background/70">
+          <span key={i} className="flex items-center gap-10 font-mono text-sm tracking-tight text-primary-foreground/80">
             <span>{eq}</span>
-            <span className="text-primary-foreground/30">·</span>
+            <span className="text-primary-foreground/40">·</span>
           </span>
         ))}
       </div>
       <div className="flex shrink-0 animate-marquee gap-10 pr-10" aria-hidden="true">
         {[...EQUATIONS, ...EQUATIONS].map((eq, i) => (
-          <span key={i} className="flex items-center gap-10 font-mono text-sm tracking-tight text-background/70">
+          <span key={i} className="flex items-center gap-10 font-mono text-sm tracking-tight text-primary-foreground/80">
             <span>{eq}</span>
-            <span className="text-primary-foreground/30">·</span>
+            <span className="text-primary-foreground/40">·</span>
           </span>
         ))}
       </div>
